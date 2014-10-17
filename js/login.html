@@ -1,0 +1,52 @@
+<html>
+
+	<head>
+		<script>
+
+		document.getElementById("home").click=function(){
+			document.getElementById("t").style.display="none";
+		}
+
+			function func()
+			{
+				document.getElementById("t").style.display="block";
+			}
+		</script>
+
+	</head>
+	<body style="background:#fff3e8">
+
+	   <div style="background:black;width:inherit;height:30px;position:relative;margin-top:5px;">
+	      
+			  <div style="display:inline;width:100%;text-align:left;color:white;font-weight:bold">
+			  	<a href="" id="home" style="text-decoration:none;color:white;padding-left:5px"> Home </div>
+	      <div style="display:inline;clear:both;position:absolute;width:100%; text-align:right;">
+		   	  <div style="color:white;display:inline;width:100%;font-weight:bold;padding-right:15px;">
+		   	  	<a href="#login" onclick="func()" id="login" style="text-decoration:none;color:white">Login&nbsp;&nbsp; |
+		   	  </div>
+	  	   	  
+	  	   	  <div style="color:white;display:inline;width:100%;padding-right:55px;font-weight:bold;">
+	  	   	  	<a href="../css/index.html" style="text-decoration:none;color:white;">Signup</a>
+	  	   	  </div>
+	   	  </div>
+	   </div>
+
+	<div id="t" style="display:none">
+	   <div style="display:table;position:relative;margin:auto;width:35%;height:15%;background:linear-gradient(white,#242424);margin-top:20%;opacity:0.6;text-align:center">
+	   		<div style="display:table-row;">
+	   			<div style="display:table-cell;padding-top:25px;"><input type="textbox" style="border-radius:5px;width:95%" placeholder="Username"></div>
+	   		</div>
+	   		<div style="display:table-row">
+	   			<div style="display:table-cell;"><input type="textbox" style="border-radius:5px;width:95%" placeholder="Password"></div>	   			
+	   		</div>
+
+	   		<div style="display:table-row">
+	   			<div style="display:table-cell;"><input type="button" onclick="login()" style="background:linear-gradient(white,#242424);width:20%;height:30px;border-radius:10px;" value="submit"></div>	   			
+	   		</div>
+	   					
+	   		   		
+	   </div>
+	</div>
+
+	</body>
+</html>
