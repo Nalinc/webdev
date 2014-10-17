@@ -1,0 +1,44 @@
+<html>
+	<script>
+	
+				document.getElementById("btn").onclick = function(){
+    alert("Hello world!");
+		function openwin()
+		{
+			mywin = window.open("","mywin","width=300,height=window.outerHeight()");
+			mywin.document.write("Hello World");
+			mywin.blur();
+
+		}
+		function closewin()
+		{
+			mywin.close();
+		}
+	</script>
+	<body>
+		<input type="button" onclick="openwin()" id ="r" value="open">
+		<input type="button" onclick="closewin()" value="close">
+
+		<input type="button" id="foo" value="getinfo"/>
+		<p id="p"></p>
+		<script type="text/javascript">
+			document.getElementById("foo").onclick = function(){
+				
+				var c = document.body.childNodes;
+				var txt="";
+				for(var i=0;i<document.body.childNodes.length;i++)
+				{
+					txt = txt + document.body.
+				}
+				document.getElementById("p").innerHTML= txt;
+			}
+		</script>
+
+
+
+
+
+
+
+	</body>
+</html>
