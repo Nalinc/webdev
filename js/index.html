@@ -21,18 +21,24 @@
 
 		<input type="button" id="foo" value="getinfo"/>
 		<p id="p"></p>
-		<script>
-			document.getElementById("foo").onclick=function(){
-				var c=document.getElementById("r").attributes;
-				var txt=""
-				for(var i=0;i<c.length;i++)
+		<script type="text/javascript">
+			document.getElementById("foo").onclick = function(){
+				
+				var c = document.body.childNodes;
+				var txt="";
+				for(var i=0;i<document.body.childNodes.length;i++)
 				{
-					txt += c[i].name+"<br>";
+					txt = txt + document.body.
 				}
-				document.getElementById("p").innerHTML=txt;
-				document.getElementById("r").value=prompt("hello?");
+				document.getElementById("p").innerHTML= txt;
 			}
 		</script>
+
+
+
+
+
+
 
 	</body>
 </html>
