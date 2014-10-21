@@ -49,7 +49,7 @@
  					 	 	<div class="Rfield">
  					 	 		<input type="textbox" placeholder="First Name" id="fname" > 
  					 	 		<input type="textbox" placeholder="Surame" id="lname">
- 					 	 		<span id="vname"> err ..</span>
+ 					 	 		<span style="display:inline-block" id="vname"> err ..</span>
  					 	 	</div>
 						 </div>
 						
@@ -61,7 +61,7 @@
  					 	 			<option> Male</option>
  					 	 			<option> Female</option>
  					 	 		</select>
- 					 	 		<span id="vgender"> err ..</span>
+ 					 	 		<span style="display:inline-block" id="vgender"> err ..</span>
  					 	 	</div>
 						 </div>
                            
@@ -70,7 +70,7 @@
  					 	 	<div class="Rfield" >
  					 	 		<input type="textbox" placeholder="Day" style="width:70px" id="day"> 
  					 	 		<select id="month">
-					 	 			<option> - Select Month- </option>
+					 	 			<option> - Select Month - </option>
  					 	 			<option> January </option>
  					 	 			<option> Febuary </option>
  					 	 			<option> March </option>
@@ -85,7 +85,7 @@
  					 	 			<option> December </option>
   					 	 		</select>
  					 	 		<input type="textbox" placeholder="Year" style="width:84px" id="year">
- 					 	 		<span id="vdob"> err ..</span>
+ 					 	 		<span style="display:inline-block" id="vdob"> err ..</span>
  					 	 	</div>
 						 </div>  
 
@@ -93,20 +93,20 @@
  					 	 	<div class="Lfield">I live in</div>
  					 	 	<div class="Rfield">
  					 	 		<select id="location">
-					 	 			<option> - Select Country- </option>
+					 	 			<option> - Select Country - </option>
  					 	 			<option> India </option>
  					 	 			<option> US </option>
  					 	 			<option> Switzerland </option>
  					 	 			<option> UK </option> 
  					 	 		</select>
- 					 	 		<span id="vlocation">err.. </span>
+ 					 	 		<span style="display:inline-block" id="vlocation">err.. </span>
  					 	 	</div>
 						 </div>	
 
 						 <div class="wraprow">
  					 	 	<div class="Lfield">Postal Code</div>
  					 	 	<div class="Rfield">
- 					 	 		<input type="textbox" id="postalcode">
+ 					 	 		<input type="textbox" id="postal">
 							<span id="vpostal"> err ..</span>
  					 	 	</div>
 
@@ -157,7 +157,7 @@
  						 	 			</div>
  									</div>
  					 	 		</div>
- 									<span id="pwderror">err</span>
+ 									<span style="display:inline-block" id="pwderror">err</span>
 
  					 	 	</div>
 						 </div>
@@ -165,8 +165,8 @@
 						 <div class="wraprow">
  					 	 	<div class="Lfield">Re-type Password</div>
  					 	 	<div class="Rfield">
- 					 	 		<input type="password" style="width:20vh" id="rpwd" onchange="vpwd()">
- 					 	 		<span id="vpwd" style="padding-left:1vw">err</span>
+ 					 	 		<input type="password" style="width:20vh" id="rpwd" onblur="vpwd()">
+ 					 	 		<span id="vpwd" style="display:inline-block;padding-left:1vw">err</span>
  					 	 	</div>
 						 </div>					 
 					</div>
@@ -209,7 +209,7 @@
  					 	 <div class="wraprow">
  					 	 	<div class="Lfield" style="font-style:italic;">Marketing Preferences</div>
  					 	 	<div class="Rfield" style="vertical-align:bottom;">
- 					 	 		<input type="checkbox" id="pref" name="pref" checked>Contact me occasionally about special offers, promotions and Yahoo! features. More Information <a href="#" style="text-decoration:none">here</a>
+ 					 	 		<input type="checkbox" id="pref" name="pref" checked="no">Contact me occasionally about special offers, promotions and Yahoo! features. More Information <a href="#" style="text-decoration:none">here</a>
  					 	 	</div>
 						 </div>
 						
@@ -230,9 +230,11 @@
 						 </div>		
 
 						 <div class="wraprow">
- 					 	 	<div class="Lfield">Do you agree ?</div>
+ 					 	 	<div class="Lfield">Do you agree ?<br>
+ 					 	 		<span style="color:red" id="terms"></span>
+ 					 	 	</div>
  					 	 	<div class="Rfield" style="vertical-align:bottom;text-align:justify;">
- 					 	 		<input type="checkbox" id="pref" value="ticked">I have read and agree to the <a href="#" style="text-decoration:none">Yahoo! Terms of Service</a> and <a href="#" style="text-decoration:none">Yahoo Privacy Policy</a>, and to receive important communications electronically from Yahoo! <hr style="height:0.5px; visibility:hidden;margin-bottom:-1px;" />
+ 					 	 		<input type="checkbox" id="pref" >I have read and agree to the <a href="#" style="text-decoration:none">Yahoo! Terms of Service</a> and <a href="#" style="text-decoration:none">Yahoo Privacy Policy</a>, and to receive important communications electronically from Yahoo! <hr style="height:0.5px; visibility:hidden;margin-bottom:-1px;" />
  					 	 	I have also read and agree to the <a href="#" style="text-decoration:none">Mail Terms of Service.</a>
  					 	 	<hr style="height:0.5px; visibility:hidden;margin-bottom:-1px;" />
  					 	 	<span style="color:grey">For your convenience, these documents will be e-mailed to your Yahoo! mail account.</span>
@@ -243,8 +245,12 @@
 			<div style="clear:both;width:100%; border-bottom:1px dashed black;padding-top:7px"></div>
 
 			<div class="row">			
-				<div style="float:right;padding-top:5px"><input type="submit" value="Cancel" style="font:normal normal bold Ariel;background:linear-gradient(#fffbf3,#ada7a0); border-radius:10px; width:19vmin;height:4vh;border:0.5px solid #575757 "></div>	
-				<div style="float:right;padding-top:5px;padding-right:10px"><input type="submit" value="Create My Account" style="background: linear-gradient(#fffbf3, #ffdb88); border-radius:10px;width:45vmin;height:4vh;font: bold:0.5px solid #575757 "></div>	
+				<div style="float:right;padding-top:5px">
+					<input type="submit" value="Cancel" style="font:normal normal bold Ariel;background:linear-gradient(#fffbf3,#ada7a0); border-radius:10px; width:19vmin;height:4vh;border:0.5px solid #575757 ">
+				</div>	
+				<div style="float:right;padding-top:5px;padding-right:10px">
+					<input type="submit" value="Create My Account" onclick="validate()" style="background: linear-gradient(#fffbf3, #ffdb88); border-radius:10px;width:45vmin;height:4vh;font: bold:0.5px solid #575757 ">
+				</div>	
 			</div>
 
 			<div style="clear:both;width:100%;border-bottom:1px solid black;padding-top:20px"></div> 
