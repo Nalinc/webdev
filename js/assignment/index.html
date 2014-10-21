@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Demo Page</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>	
+    <body>
+
+    	<div class="header">
+    		<div class="hrow">
+    			<div class="col_left"><img src="yahoo-in.gif"></div>
+    			<div class="col_right" style="text-align: right;"><span style="color:blue;padding-right:10px;font-size:2vmin">Yahoo! - Help</span></div>
+    		</div>
+
+    		<div class="hrow">
+    			<div class="col_left" style="padding-top:1.5%;padding-right:2%">
+    				<img src="stu.gif" style="float:left"/>
+    				<span style="display: inline-block;color:purple;font:normal normal bold 3vmin Arial; margin-bottom: 10px;">Hi there!</span><br>
+    				<span style="font-size:2.0vmin;color:#737373">We'll get you set up on Yahoo! in three easy steps! Just answer a few simple questions, select an ID and password, and you'll be all set.</span>
+
+    			</div>
+    			<div class="col_right" style="padding-left:3%;padding-right:2%"><br>
+    				<span style="font-size:1.6vmin;">Already have an ID or e-mail address?</span><br>
+    				<input type="submit" value="Sign In" class="btnlogin"/><br>
+    				<span style="color:blue;font-size:1.6vmin;">Forgot your password or Yahoo ID ?</span> 
+    			</div>
+    		</div>
+    		<div style="clear:both;width:154%; overflow:hidden; border-bottom:1.5px dashed #737373; align:right"> </div>	
+    	</div>
+		
+    	<div class="container" style="padding-top:8px">
+    		<div class="row">			
+					<div style="float:right;font-size:2vmin;color:purple">I prefer content from 
+						<select style="width:140px">
+							<option>Yahoo! India</option>
+							<option>Yahoo! India</option>
+							<option>Yahoo! India</option>
+						</select>
+					</div>
+			</div>
+
+			<div class="row">			
+					<div class="wraphead">1. Tell us about yourself...</div>
+					<div class="wrapper" >				 	
+ 					 	 <div class="wraprow">
+ 					 	 	<div class="Lfield">My Name</div>
+ 					 	 	<div class="Rfield">
+ 					 	 		<input type="textbox" placeholder="First Name" id="fname" > 
+ 					 	 		<input type="textbox" placeholder="Surame" id="lname">
+ 					 	 		<span id="vname"> err ..</span>
+ 					 	 	</div>
+						 </div>
+						
+						 <div class="wraprow">
+ 					 	 	<div class="Lfield">Gender</div>
+ 					 	 	<div class="Rfield">
+ 					 	 		<select id="gender">
+					 	 			<option> - Select One - </option>
+ 					 	 			<option> Male</option>
+ 					 	 			<option> Female</option>
+ 					 	 		</select>
+ 					 	 		<span id="vgender"> err ..</span>
+ 					 	 	</div>
+						 </div>
+                           
+                         <div class="wraprow">
+ 					 	 	<div class="Lfield">Birthday</div>
+ 					 	 	<div class="Rfield" >
+ 					 	 		<input type="textbox" placeholder="Day" style="width:70px" id="day"> 
+ 					 	 		<select id="month">
+					 	 			<option> - Select Month- </option>
+ 					 	 			<option> January </option>
+ 					 	 			<option> Febuary </option>
+ 					 	 			<option> March </option>
+ 					 	 			<option> April </option> 					 	 			
+ 					 	 			<option> May </option>
+ 					 	 			<option> June </option>
+ 					 	 			<option> July </option>
+ 					 	 			<option> August </option>
+ 					 	 			<option> September </option>
+ 					 	 			<option> October </option>
+ 					 	 			<option> November </option>
+ 					 	 			<option> December </option>
+  					 	 		</select>
+ 					 	 		<input type="textbox" placeholder="Year" style="width:84px" id="year">
+ 					 	 		<span id="vdob"> err ..</span>
+ 					 	 	</div>
+						 </div>  
+
+ 					 	 <div class="wraprow">
+ 					 	 	<div class="Lfield">I live in</div>
+ 					 	 	<div class="Rfield">
+ 					 	 		<select id="location">
+					 	 			<option> - Select Country- </option>
+ 					 	 			<option> India </option>
+ 					 	 			<option> US </option>
+ 					 	 			<option> Switzerland </option>
+ 					 	 			<option> UK </option> 
+ 					 	 		</select>
+ 					 	 		<span id="vlocation">err.. </span>
+ 					 	 	</div>
+						 </div>	
+
+						 <div class="wraprow">
+ 					 	 	<div class="Lfield">Postal Code</div>
+ 					 	 	<div class="Rfield">
+ 					 	 		<input type="textbox" id="postalcode">
+							<span id="vpostal"> err ..</span>
+ 					 	 	</div>
+
+						 </div>					 
+					</div>
+			</div>
+<!-- -->
+			<div class="row">			
+					<div class="wraphead"><br>2. Select an ID and password</div>
+					<div class="wrapper" >				 	
+ 					 	 <div class="wraprow">
+ 					 	 	<div class="Lfield">Yahoo ID and Email</div>
+ 					 	 	<div class="Rfield" style="vertical-align:bottom;">
+ 					 	 		<input type="textbox" > @
+ 					 	 		<select>
+					 	 			<option> yahoo.in </option>
+ 					 	 			<option> gmail.com </option>
+ 					 	 			<option> live.com </option>
+ 					 	 		</select>
+ 					 	 		<input type="submit" value="check" style="background-color:#faf7e6;border-radius:3px;border:0.7px solid black;">
+
+ 					 	 	</div>
+						 </div>
+						
+						 <div class="wraprow">
+ 					 	 	<div class="Lfield">Password</div>
+ 					 	 	<div class="Rfield">
+ 					 	 		<input type="password" style="width:20vh" id="pwd" onchange="vStrength()">
+
+ 					 	 		<div style="display:inline-block; position:relative;padding-left:10px;padding-top:-50px">
+ 					 	 			<div style="display:table;">
+	 					 	 			<div style="display:table-row; ">
+	 					 	 				<div style="table-cell;font-size:10px;">Password Strength</div>
+	 					 	 			</div>
+ 						 	 			<div style="display:table-row;font-size:8px">
+ 						 	 				<div style="float:left; table-cell">
+ 						 	 					<div class="pwstrength" id="pwd_a"></div>
+ 						 	 				</div>
+ 						 	 				<div style="float:left; table-cell">
+ 						 	 					<div class="pwstrength" id="pwd_b"></div>
+ 						 	 				</div>
+ 						 	 				<div style="float:left; table-cell">
+ 						 	 					<div class="pwstrength" id="pwd_c"></div>
+ 						 	 				</div>
+ 						 	 				 <div style="float:left; table-cell">
+ 						 	 					<div class="pwstrength" id="pwd_d"></div>
+ 						 	 				</div>
+ 						 	 			</div>
+ 									</div>
+ 					 	 		</div>
+
+ 					 	 	</div>
+						 </div>
+
+						 <div class="wraprow">
+ 					 	 	<div class="Lfield">Re-type Password</div>
+ 					 	 	<div class="Rfield">
+ 					 	 		<input type="password" style="width:20vh" onchange="vpwd">
+ 					 	 		<span id="vpwd" style="padding-left:1vw">hhdf</span>
+ 					 	 	</div>
+						 </div>					 
+					</div>
+			</div>
+<!--  -->
+			<div class="row">			
+					<div class="wraphead"><br>3. In case you forget your ID or password...</div>
+					<div class="wrapper" >				 	
+ 					 	 <div class="wraprow">
+ 					 	 	<div class="Lfield" style="font-style:italic">Alternate e-mail</div>
+ 					 	 	<div class="Rfield" style="vertical-align:bottom;">
+ 					 	 		<input type="textbox" id="altemail">
+
+ 					 	 	</div>
+						 </div>
+						
+						 <div class="wraprow">
+ 					 	 	<div class="Lfield">Security Question</div>
+ 					 	 	<div class="Rfield">
+ 					 	 		 <select>
+					 	 			<option> - Select One - </option>
+ 					 	 			<option> - Your first school - </option>
+ 					 	 			<option> - Name of your pet - </option>
+ 					 	 		</select>
+ 					 	 	</div>
+						 </div>		
+						 <div class="wraprow">
+ 					 	 	<div class="Lfield">Your Answer</div>
+ 					 	 	<div class="Rfield"><input type="textbox"  ></div>
+						 </div>					 
+					</div>
+			</div>
+			<div style="clear:both;width:100%; border-bottom:1.5px dashed #737373;padding-top:10px; "> </div>
+    	</div>
+
+    	<div class="container" style="padding-top:10px">
+    		<div class="row">			
+					<div class="wraphead">Just a couple of more details...</div>
+					<div class="wrapper" >				 	
+ 					 	 <div class="wraprow">
+ 					 	 	<div class="Lfield" style="font-style:italic;">Marketing Preferences</div>
+ 					 	 	<div class="Rfield" style="vertical-align:bottom;">
+ 					 	 		<input type="checkbox" id="pref" name="pref" checked>Contact me occasionally about special offers, promotions and Yahoo! features. More Information <a href="#" style="text-decoration:none">here</a>
+ 					 	 	</div>
+						 </div>
+						
+						 <div class="wraprow">
+ 					 	 	<div class="Lfield">Type the code shown</div>
+ 					 	 	<div class="Rfield">
+ 					 	 		<input type="textbox" id="scode" name="scode">
+ 					 	 	</div>
+						 </div>		
+
+						 <div class="wraprow">
+ 					 	 	<div class="Lfield" style="vertical-align:top;padding-top:3px">
+ 					 	 		<a href="#"><img src="refresh.GIF"></a>
+ 					 	 	</div>
+ 					 	 	<div class="Rfield">
+ 					 	 		<img src="captcha.gif" style="width:27vh">
+ 					 	 	</div>
+						 </div>		
+
+						 <div class="wraprow">
+ 					 	 	<div class="Lfield">Do you agree ?</div>
+ 					 	 	<div class="Rfield" style="vertical-align:bottom;text-align:justify;">
+ 					 	 		<input type="checkbox" id="pref" value="ticked">I have read and agree to the <a href="#" style="text-decoration:none">Yahoo! Terms of Service</a> and <a href="#" style="text-decoration:none">Yahoo Privacy Policy</a>, and to receive important communications electronically from Yahoo! <hr style="height:0.5px; visibility:hidden;margin-bottom:-1px;" />
+ 					 	 	I have also read and agree to the <a href="#" style="text-decoration:none">Mail Terms of Service.</a>
+ 					 	 	<hr style="height:0.5px; visibility:hidden;margin-bottom:-1px;" />
+ 					 	 	<span style="color:grey">For your convenience, these documents will be e-mailed to your Yahoo! mail account.</span>
+ 					 	 	</div>
+						 </div>
+					</div>
+			</div>
+			<div style="clear:both;width:100%; border-bottom:1px dashed black;padding-top:7px"></div>
+
+			<div class="row">			
+				<div style="float:right;padding-top:5px"><input type="submit" value="Cancel" style="font:normal normal bold Ariel;background:linear-gradient(#fffbf3,#ada7a0); border-radius:10px; width:19vmin;height:4vh;border:0.5px solid #575757 "></div>	
+				<div style="float:right;padding-top:5px;padding-right:10px"><input type="submit" value="Create My Account" style="background: linear-gradient(#fffbf3, #ffdb88); border-radius:10px;width:45vmin;height:4vh;font: bold:0.5px solid #575757 "></div>	
+			</div>
+
+			<div style="clear:both;width:100%;border-bottom:1px solid black;padding-top:20px"></div> 
+    	</div>
+
+		<div class="footer" style="padding-top:10px">
+    		<div class="frow">	
+    			<div style="width:100%; text-align:justify" class="footer">
+    				Copyright &copy 2008 Yahoo Web Services india Pvt Ltd. All rights reserved <a href="#">Copyright/IP Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Guide to Online Security</a>. 
+    				Code verification technology developed in collaboration with the <a href="#">Captcha Project</a> at <a href="#">Carnegie Mellon University.</a><hr style="visibility:hidden; margin-bottom:-1px">
+    				NOTICE: We collect personal information on tghis site. To learn more about how we use your information, see our <a href="#">Privacy Policy.<a><hr style="visibility:hidden;margin-bottom:-1px">
+    				<span style="color:grey">Data is provided for informational purposes only and may not be accurate. Yahoo shall not be liable for any errors or delays in the content, or for any actions taken on the basis of these listings.   </span>
+    			</div>		
+
+    		</div>
+		
+		</div>
+    </body>
+
+</html>

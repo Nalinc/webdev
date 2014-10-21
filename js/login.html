@@ -2,20 +2,41 @@
 
 	<head>
 		<script>
+    	window.addEventListener("hashchange",function(){
+			alert("boo");
+		});	
+	
 
-		document.getElementById("home").click=function(){
+
+
+
+
+		document.getElementById("home").click=function()
+		{
 			document.getElementById("t").style.display="none";
 		}
 
-			function func()
-			{
+		function func()
+		{
 				document.getElementById("t").style.display="block";
-			}
+		}
+
+          
 		</script>
 
 	</head>
-	<body style="background:#fff3e8">
+	<body style="background:#fff3e8;height:100%" id="bdy" >
+<script>
 
+	document.getElementById("bdy").addEventListener("contextmenu",function()
+	{
+		var p=[1,2,34,5]
+	for(var i in p)
+			console.log(p[i]);
+		});
+	
+
+</script>
 	   <div style="background:black;width:inherit;height:30px;position:relative;margin-top:5px;">
 	      
 			  <div style="display:inline;width:100%;text-align:left;color:white;font-weight:bold">
@@ -30,10 +51,18 @@
 	  	   	  </div>
 	   	  </div>
 	   </div>
-    
-    <div style="font:normal normal bold 40px Arial;text-align:center; padding-top: 5%">
-		<span style="text-decoration:none">^</span><span style="border:3px dashed red">LAB</span><span style="text-decoration:overline">Z</span> 
 
+	   <input type="button" id="btn" value="clickMe" onclick="window.open();">
+	   <div oncopy="alert('you have selected: '+window.getSelection().toString().length+' charactersw')">
+	   	hjhdasjkhsdaas hasjkdhajkdhaks hasdkjashdaswopqwi jiweuqw9 nxcmhxk we90q08qwe uioquew asdkasj
+	   	iqoqwej joqweiqw jqwepuiqw ' oqwe[o'
+	   </div>
+
+
+   <!-- 
+    <div style="font:normal normal bold 40px Arial;text-align:center; padding-top: 5%">
+		<span style="text-decoration:underline">Z</span><span style="border:3px dashed red">LAB</span><span style="text-decoration:overline">Z</span> 
+-->
 	</div>
 	
 	<div id="t" style="display:none">
