@@ -1,4 +1,22 @@
 var errors=0;
+var str;
+
+window.onload = function(){loadCaptcha()}
+
+function loadCaptcha(event)
+{	
+	str=Math.random().toString(36).substr(2,5)
+	document.getElementById("captcha").value=str;	
+	event.preventDefault();
+}
+
+function validateCaptcha()
+{
+  if(document.getElementById("scode").value.toString() != str)
+   	document.getElementById("vcode").innerHTML="Wrong Security code";
+   else
+   	document.getElementById("vcode").innerHTML=""; 
+}
 
 function boo()
 {
@@ -18,7 +36,7 @@ function vpwd()
 	}else
 	{
 		document.getElementById("vpwd").style.color="red"
-		document.getElementById("vpwd").innerHTML= "Invalid! Passwords doesnt match";	
+		document.getElementById("vpwd").innerHTML= "Invalid Passwords!";	
 		errors++;	
 	}
 }
@@ -34,6 +52,7 @@ function vStrength()
 	
 	document.getElementById("vpwd").innerHTML="";
 	document.getElementById("rpwd").value="";
+	document.getElementById("vcode").value="";
 
 	if(isValid(p))
 	{
@@ -71,7 +90,7 @@ function vStrength()
 function isValid(str)
 {
 	var p=str.toString();
-  if(p.length > 8 && Boolean(p.match(/[a-z]/g)) && Boolean(p.match(/[A-Z]/g)) )
+  if(p.length >= 8 && Boolean(p.match(/[a-z]/g)) && Boolean(p.match(/[A-Z]/g)) )
   	{
   		document.getElementById("pwderror").style.color="green";
   		document.getElementById("pwderror").innerHTML="&#10004";
@@ -101,39 +120,39 @@ It may optionally contain:\n\
 	alert(rules);
 }
 
-
-function validate()
+function validateName()
 {
 	var fname=document.getElementById("fname").value;
 	var lname=document.getElementById("lname").value;
 	var name=fname+lname;
-	document.getElementById("vdob").innerHTML="";
-	document.getElementById("vname").innerHTML="";
-	document.getElementById("vgender").innerHTML="";
-	document.getElementById("vlocation").innerHTML="";
-	document.getElementById("vpostal").innerHTML="";
-	document.getElementById("terms").innerHTML="";	
 
-
-	if(name.match(/[0-9|!|@|#|*|_|-]/g) || fname== "" || lname=="")
+	if(name.match(/[^a-zA-Z]/g) || fname== "" || lname=="")
 	{	document.getElementById("vname").style.color="red";
 		document.getElementById("vname").innerHTML="Invalid Name";	
 	}
+}
 
+function validateGender()
+{
 	if(document.getElementById("gender").value == "- Select One -")
 	{	document.getElementById("vgender").style.color="red";
 		document.getElementById("vgender").innerHTML="Please select your gender!";	
 	}
+}
 
+function validateDOB()
+{
 	var d=document.getElementById("day").value;
 	var m=document.getElementById("month").value;
 	var y=document.getElementById("year").value;
 	document.getElementById("vdob").style.color="red";
 
-	if(m == "- Select Month -" || d == "" || y == "")
+	if(m == "- Select Month -" || d == "" || y.length!=4 || d.match(/\D/g) || y.match(/\D/g))
 		document.getElementById("vdob").innerHTML="Invalid Date!";	
 	
-
+	if(y<1900 || y>=new Date().getFullYear())
+		document.getElementById("vdob").innerHTML="Invalid Date!";	
+	
 	if((y%4==0 && y%100==0 )|| y%400==0)
 	{	if(m=="Febuary" && d>29 || d<1)
 			document.getElementById("vdob").innerHTML="Invalid Date!";
@@ -149,33 +168,75 @@ function validate()
 
 	var mth=["April","June","September","November"];
 	if(mth.indexOf(m) !=-1 && d>30 || d<1)
-			document.getElementById("vdob").innerHTML="Invalid Date!";
+			document.getElementById("vdob").innerHTML="Invalid Date!";	
+}
 
+function validateCountry()
+{
 	if(document.getElementById("location").value == "- Select Country -")
 	{	document.getElementById("vlocation").style.color="red";
 		document.getElementById("vlocation").innerHTML="Please select your country!";	
 	}
 
+}
+
+function validatePostal()
+{
 	var pc=document.getElementById("postal").value;
-	if(isNaN(pc)||pc=="")
+	if(isNaN(pc)||pc=="" || pc.length<6)
 	{	document.getElementById("vpostal").style.color="red";
 		document.getElementById("vpostal").innerHTML="Invalid!";		
-	}
+	}	
+}
+
+function validateEmail()
+{
+    var em=document.getElementById("email").value;     
+
+	if(Boolean(!em.match(/^\w{2,}.?\w{1,}\w$/g)))
+    		document.getElementById("vemail").innerHTML="Invalid ID!";	
+
+     var alte=document.getElementById("altemail").value;
+
+
+    if( Boolean(! alte.match(/\w{2,}.?\w{2,}@\w{3,}.\w{2,3}$/g)) )
+    		document.getElementById("valtemail").innerHTML="Invalid Email!";	
+
+
+}
+
+
+function validate()
+{
+	document.getElementById("vdob").innerHTML="";
+	document.getElementById("vname").innerHTML="";
+	document.getElementById("vgender").innerHTML="";
+	document.getElementById("vlocation").innerHTML="";
+	document.getElementById("vpostal").innerHTML="";
+	document.getElementById("vterms").innerHTML="";	
+	document.getElementById("vemail").innerHTML="";
+	document.getElementById("valtemail").innerHTML="";
+
+	validateCaptcha();
+
+	validateName();
+
+	validateGender();
+
+	validateDOB();
+
+	validateCountry();
+
+	validatePostal();
 
 	vpwd();
 
- /*   if (document.getElementById('terms').checked) 
-    {
-		document.getElementById("terms").innerHTML="";
-     } else {
-		document.getElementById("terms").innerHTML="You must agree to our Terms of Service.!";	
-        }
-
-	*/
-
-	 if (document.getElementById('terms').checked) {
-            alert("checked");
-        } else {
-            alert("You didn't check it! Let me check it for you.");
-        } 
+	if(document.getElementById('terms').checked==false)
+        document.getElementById("vterms").innerHTML="You must agree to our Terms of Service.!";
+         
+    validateEmail();
 }
+
+/*
+
+*/

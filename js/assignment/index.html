@@ -5,6 +5,10 @@
 		
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 		<script src="./main.js"  type="text/javascript"> </script>
+		<script>
+
+		</script>
+
 	</head>	
     <body>
 
@@ -49,7 +53,7 @@
  					 	 	<div class="Rfield">
  					 	 		<input type="textbox" placeholder="First Name" id="fname" > 
  					 	 		<input type="textbox" placeholder="Surame" id="lname">
- 					 	 		<span style="display:inline-block" id="vname"> err ..</span>
+ 					 	 		<span style="display:inline-block" id="vname"></span>
  					 	 	</div>
 						 </div>
 						
@@ -61,7 +65,7 @@
  					 	 			<option> Male</option>
  					 	 			<option> Female</option>
  					 	 		</select>
- 					 	 		<span style="display:inline-block" id="vgender"> err ..</span>
+ 					 	 		<span style="display:inline-block" id="vgender"></span>
  					 	 	</div>
 						 </div>
                            
@@ -85,7 +89,7 @@
  					 	 			<option> December </option>
   					 	 		</select>
  					 	 		<input type="textbox" placeholder="Year" style="width:84px" id="year">
- 					 	 		<span style="display:inline-block" id="vdob"> err ..</span>
+ 					 	 		<span style="display:inline-block" id="vdob"></span>
  					 	 	</div>
 						 </div>  
 
@@ -99,7 +103,7 @@
  					 	 			<option> Switzerland </option>
  					 	 			<option> UK </option> 
  					 	 		</select>
- 					 	 		<span style="display:inline-block" id="vlocation">err.. </span>
+ 					 	 		<span style="display:inline-block" id="vlocation"></span>
  					 	 	</div>
 						 </div>	
 
@@ -107,7 +111,7 @@
  					 	 	<div class="Lfield">Postal Code</div>
  					 	 	<div class="Rfield">
  					 	 		<input type="textbox" id="postal">
-							<span id="vpostal"> err ..</span>
+							<span id="vpostal"></span>
  					 	 	</div>
 
 						 </div>					 
@@ -120,14 +124,14 @@
  					 	 <div class="wraprow">
  					 	 	<div class="Lfield">Yahoo ID and Email</div>
  					 	 	<div class="Rfield" style="vertical-align:bottom;">
- 					 	 		<input type="textbox" > @
+ 					 	 		<input type="textbox" id="email"> @
  					 	 		<select>
 					 	 			<option> yahoo.in </option>
  					 	 			<option> gmail.com </option>
  					 	 			<option> live.com </option>
  					 	 		</select>
  					 	 		<input type="submit" value="check" style="background-color:#faf7e6;border-radius:3px;border:0.7px solid black;">
-
+ 					 	 		<span id="vemail" style="color:red"></span>
  					 	 	</div>
 						 </div>
 						
@@ -157,7 +161,7 @@
  						 	 			</div>
  									</div>
  					 	 		</div>
- 									<span style="display:inline-block" id="pwderror">err</span>
+ 									<span style="display:inline-block" id="pwderror"></span>
 
  					 	 	</div>
 						 </div>
@@ -166,7 +170,7 @@
  					 	 	<div class="Lfield">Re-type Password</div>
  					 	 	<div class="Rfield">
  					 	 		<input type="password" style="width:20vh" id="rpwd" onblur="vpwd()">
- 					 	 		<span id="vpwd" style="display:inline-block;padding-left:1vw">err</span>
+ 					 	 		<span id="vpwd" style="display:inline-block;padding-left:1vw"></span>
  					 	 	</div>
 						 </div>					 
 					</div>
@@ -179,7 +183,7 @@
  					 	 	<div class="Lfield" style="font-style:italic">Alternate e-mail</div>
  					 	 	<div class="Rfield" style="vertical-align:bottom;">
  					 	 		<input type="textbox" id="altemail">
-
+							<span id="valtemail" style="color:red"></span>
  					 	 	</div>
 						 </div>
 						
@@ -217,24 +221,25 @@
  					 	 	<div class="Lfield">Type the code shown</div>
  					 	 	<div class="Rfield">
  					 	 		<input type="textbox" id="scode" name="scode">
+ 					 	 		<span style="display:inline-block;color:red" id="vcode"></span>
  					 	 	</div>
 						 </div>		
 
 						 <div class="wraprow">
  					 	 	<div class="Lfield" style="vertical-align:top;padding-top:3px">
- 					 	 		<a href="#"><img src="refresh.GIF"></a>
+ 					 	 		<a href="#"><img src="refresh.GIF" onclick="loadCaptcha(event)"></a>
  					 	 	</div>
  					 	 	<div class="Rfield">
- 					 	 		<img src="captcha.gif" style="width:27vh">
+ 					 	 		<input type="text" id="captcha" style="width:25vmin;height:8vmin;font:italic normal normal 5vw 'Brush Script MT';text-align:center" readonly="true">
  					 	 	</div>
 						 </div>		
 
 						 <div class="wraprow">
  					 	 	<div class="Lfield">Do you agree ?<br>
- 					 	 		<span style="color:red" id="terms"></span>
+ 					 	 		<span style="color:red" id="vterms"></span>
  					 	 	</div>
  					 	 	<div class="Rfield" style="vertical-align:bottom;text-align:justify;">
- 					 	 		<input type="checkbox" id="pref" >I have read and agree to the <a href="#" style="text-decoration:none">Yahoo! Terms of Service</a> and <a href="#" style="text-decoration:none">Yahoo Privacy Policy</a>, and to receive important communications electronically from Yahoo! <hr style="height:0.5px; visibility:hidden;margin-bottom:-1px;" />
+ 					 	 		<input type="checkbox" id="terms" >I have read and agree to the <a href="#" style="text-decoration:none">Yahoo! Terms of Service</a> and <a href="#" style="text-decoration:none">Yahoo Privacy Policy</a>, and to receive important communications electronically from Yahoo! <hr style="height:0.5px; visibility:hidden;margin-bottom:-1px;" />
  					 	 	I have also read and agree to the <a href="#" style="text-decoration:none">Mail Terms of Service.</a>
  					 	 	<hr style="height:0.5px; visibility:hidden;margin-bottom:-1px;" />
  					 	 	<span style="color:grey">For your convenience, these documents will be e-mailed to your Yahoo! mail account.</span>
