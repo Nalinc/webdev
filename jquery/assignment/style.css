@@ -1,0 +1,201 @@
+.header
+{
+ 	 display:table;
+	 position:relative;
+	 width:100%;	 
+}
+
+
+.fonts
+{
+font-size:16px
+}
+
+.hrow
+{
+	display:table-row;
+	width:100%;
+}
+
+.col_left
+{
+	display:table-cell;
+	width:65%;
+}
+.col_right
+{
+	display:table-cell;
+	width:35%;
+	vertical-align: top;
+}
+
+.container
+{
+ 	 display:table;
+	 position:relative;
+	 width:100%;	 
+}
+.row
+{
+	display:table-row;
+	width:100%;
+}
+.footer
+{
+ 	 display:table;
+	 position:relative;
+	 width:100%;	
+	 font-size:15px; 
+}
+.frow
+{
+	display:table-row;
+	width:100%;
+}
+
+
+.btnlogin
+{
+	width:80px;
+	background-color:#faf7e6;
+	border-radius: 3px;
+	border:1px solid black;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	height:20px;
+	text-align: center;
+}
+
+.infoL
+{
+	display:table-cell;
+	width:20%;
+	clear:both;
+}
+.infoR
+{
+	display:table-cell;
+	width:80%;
+	clear:both;
+}
+
+.wrapper
+{
+ 	 display:table;
+	 clear:both;
+	 width:100%;
+	 position:relative;
+	
+	 padding-top:1%;
+
+}
+.wraphead
+{
+	float:left;
+	font:normal normal bold 14px Arial;
+	color:purple;
+	padding-left: 1.4%
+}
+.wraprow
+{
+	display:table-row;
+}
+.Lfield
+{
+	display:table-cell;
+	text-align:right; 
+	width:25%;
+	font-size:16px;
+}
+.Rfield
+{
+	display:table-cell; 
+	padding-left:8px;
+	width:75%;
+	padding-bottom: 7px;
+	font-size:16px;
+}
+
+a
+{
+color:blue;
+}
+.pwstrength
+{
+	width:15px;
+	height:8px; 
+	border:1px solid black;
+	padding:0 3px\9;
+}
+
+@media (max-width: 800px){
+	.fonts
+	{
+	font-size:9px
+	}
+
+	.Lfield
+	{
+		display:table-cell;
+		text-align:right; 
+		width:25%;
+		font-size:12px;
+	}
+	.Rfield
+	{
+		display:table-cell; 
+		padding-left:8px;
+		width:75%;
+		padding-bottom: 7px;
+		font-size:12px;
+	}
+	.wraphead
+	{
+		float:left;
+		font:normal normal bold 12px Arial;
+		color:purple;
+		padding-left: 1.4%
+	}
+	.footer
+	{
+ 	 display:table;
+	 position:relative;
+	 width:100%;	
+	 font-size:12px; 
+	}	
+}
+
+@media (max-width: 400px) {
+
+	.Lfield
+	{
+		display:table-cell;
+		text-align:right; 
+		width:25%;
+		font-size:10px;
+	}
+	.Rfield
+	{
+		display:table-cell; 
+		padding-left:8px;
+		width:75%;
+		padding-bottom: 7px;
+		font-size:10px;
+	}
+	.wraphead
+	{
+		float:left;
+		font:normal normal bold 10px Arial;
+		color:purple;
+		padding-left: 1.4%
+	}
+	.footer
+	{
+ 	 display:table;
+	 position:relative;
+	 width:100%;	
+	 font-size:10px; 
+	}
+}
+
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="jquery-1.11.1.min.js"></script>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="bootstrap.min.js"></script>
+        <link href="bootstrap.min.css" rel="stylesheet" media="screen">
+        <style>
+            html {
+              font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+              font-size: 18px;
+              line-height: 1.2;
+              color: #333;
+            }
+            .tt-dropdown-menu{
+              text-align: left;
+            }
+            .typeahead,
+            .tt-query,
+            .tt-hint {
+              padding: 8px 12px;
+              font-size: 24px;
+              outline: none;
+            }
+            .typeahead {
+              background-color: #fff;
+            }
+            .tt-query {
+              -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+                 -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+                      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            }
+            .tt-hint {
+              color: #999
+            }
+            .tt-dropdown-menu {
+              width: 422px;
+              margin-top: 12px;
+              padding: 8px 0;
+              background-color: #fff;
+              border: 1px solid #ccc;
+              border: 1px solid rgba(0, 0, 0, 0.2);
+              -webkit-border-radius: 8px;
+                 -moz-border-radius: 8px;
+                      border-radius: 8px;
+              -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+                 -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+                      box-shadow: 0 5px 10px rgba(0,0,0,.2);
+            }
+            .tt-suggestion {
+              padding: 3px 20px;
+              font-size: 18px;
+              line-height: 24px;
+            }
+            .tt-suggestion.tt-cursor {
+              color: #fff;
+              background-color: #0097cf;
+            }
+            .tt-suggestion p {
+              margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="countries"> <!-- This is a .countries in that examples.js -->
+                <div class="demo">
+                    <input class="typeahead form-control" type="text" placeholder="Countries" autocomplete="off" spellcheck="false" dir="auto" > <!-- This is a typehead class in that js-->
+                    <input class="typeahead form-control" type="text" disabled="" autocomplete="off" spellcheck="false" style="visibility: hidden; ">
+                    <pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: nowrap; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;">
+                    </pre>
+                    <span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;">
+                        <div class="tt-dataset-countries"></div>
+                    </span>
+                </div>
+            </div>
+            <script src="./typeahead.bundle.js"></script>
+            <script src="./example.js"></script>
+        </div>
+    </body>
+</html>
