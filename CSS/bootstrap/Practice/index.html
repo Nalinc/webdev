@@ -1,12 +1,14 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/bootstrap-theme.css">		
+		<link rel="stylesheet" href="css/bootstrap-theme.css">	
+		<link rel="stylesheet" href="css/typeahead.css">		
 		
 		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-<!--		<script type="text/javascript" src="js/bootstrap.js"></script>   -->
-		<script src="http://getbootstrap.com/2.3.2/assets/js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>  
+<!--		<script src="http://getbootstrap.com/2.3.2/assets/js/bootstrap.js"></script> -->
 		<script type="text/javascript" src="js/carousel.js"></script>
+		<script type="text/javascript" src="js/typeahead.bundle.js"></script>
 		<style>
 		.carousel-inner {
 		    height: auto;
@@ -26,13 +28,18 @@
 		}
 		</style>
 		<script type="text/javascript">
-			$(document).ready(function(){
+/*			$(document).ready(function(){
 			$('#inputGroup').typeahead({
 		    source: ['Audi', 'BMW', 'Bugatti', 'Ferrari', 'Ford', 'Lamborghini', 'Mercedes Benz', 'Porsche', 'Rolls-Royce', 'Volkswagen']
 			  });
 
 			})
-
+*/
+	$(document).ready(function(){
+		$("#login").click(function(){
+			$("#myModal").modal('show');
+		})
+	});
 		</script>
 
 
@@ -56,14 +63,14 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Login</a></li>
+                <li><a href="#" id="login">Login</a></li>
 
             </ul>
             <form role="search" class="navbar-form navbar-right">
 		    	
 		            <div class="form-group">
 		                <div class="input-group">
-		                    <input type="text" class="form-control" placeholder="Search" id="inputGroup"/>
+		                    <input type="text" class="form-control typeahead" placeholder="Search" id="inputGroup"/>
 		                    <span class="input-group-addon">
 		                       <a href=""> <i class="glyphicon glyphicon-search"></i> </a>
 		                    </span>
@@ -101,6 +108,7 @@
 		    		<h3><b>How It Works</b></h3>
 		    	</div>
 		    </div>
+
 		    <div class="row" style="text-align:center;">
 		    	<div class="col-sm-4">
 		    		<h4><i class="glyphicon glyphicon-record"></i>
@@ -121,33 +129,97 @@
 		    	</div>
 
 		    </div>
+
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Login</h4>
+            </div>
+            <div class="modal-body" style="text-align:center">
+            	<p> Dont have an account yet ? <a href="file:///D:/webdev/css/assignment/index.html"> Register here </a></p>
+                <input type="text" placeholder="username"><br>
+                <input type="password" placeholder="password" style="margin-top:20px"><br>
+                 <button type="button" class="btn btn-primary"  style="margin-top:10px">Sign In</button>
+            </div>
+            <div class="modal-footer">
+               
+                
+                
+            </div>
+        </div>
+    </div>
 </div>
 
-		<div class="footer" style="position:fixed;bottom:0">
-		    <div class="row" style="text-align:center">
-		    	<div class="col-md-3 col-xs-6">
-		    		<div style="text-align:left;padding-left:25%"><b>Browse By Country:</b><br>
-		    			Switzerland<br>Malaysia<br>India
-		    		</div>
-		    	</div>
-		    	<div class="col-md-3 col-xs-6">
-		    		<div style="text-align:left;padding-left:25%"><b>Browse By Sport:</b><br>
-		    		      River Rafting<br>Kayaking<br>Skiing
-		    		</div>
-		    	</div>
-		    	<div class="col-md-3 col-xs-6">
-		    		<div style="text-align:left;padding-left:25%"><b>Browse By Category:</b><br>
-		    		     Adventure<br>Fun<br>Casual
-		    		 </div>
-		    	</div>
-		    	<div class="col-md-3 col-xs-6">
-		    		<div style="text-align:left;padding-left:25%"><b>Browse By Continent:</b><br>
-		    		     Europe<br>Africa<br>Asia
-		    		 </div>
-		    	</div>
 
+		    <div class="row">
+		      <div class="panel-group" id="accordion">
+		        
+		        <div class="col-sm-4 col-xs-12">  
+		          <div class="panel panel-default">
+		              <div class="panel-heading">
+		                  <h4 class="panel-title">
+		                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">1.  Make up yur mind</a>
+		                  </h4>
+		              </div>
+		              <div id="collapseOne" class="panel-collapse collapse in">
+		                <div class="panel-body">
+		                    <p> bla bla bla bla BLA BLA  bla bla bla bla bla bla bla bla bla bla bl abla <a href="#" target="_blank">Learn more.</a></p>
+		                </div>
+		              </div>
+		          </div>
+		        </div>
+
+  		        <div class="col-sm-4 col-xs-12">
+		          <div class="panel panel-default">
+		             <div class="panel-heading">
+		                <h4 class="panel-title">
+		                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">2. Choose Your activity</a>
+		                </h4>
+		             </div>
+		             <div id="collapseTwo" class="panel-collapse collapse in">
+		                <div class="panel-body">
+		                    <p>bla bla bla bla BLA BLA  bla bla bla bla bla bla bla bla bla bla bl abla  <a href="#" target="_blank">Learn more.</a></p>
+		                </div>
+		             </div>
+		          </div>
+		        </div>
+		      
+		      <div class="col-sm-4 col-xs-12">
+		        <div class="panel panel-default">
+		            <div class="panel-heading">
+		                <h4 class="panel-title">
+		                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">3. Plan Vacation</a>
+		                </h4>
+		            </div>
+		            <div id="collapseThree" class="panel-collapse collapse in">
+		                <div class="panel-body">
+		                    <p>bla bla bla bla BLA BLA  bla bla bla bla bla bla bla bla bla bla bl abla </a></p>
+		                </div>
+		            </div>
+		        </div>
+		      </div>
+
+		      </div>
 		    </div>
-		</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
 
     
 

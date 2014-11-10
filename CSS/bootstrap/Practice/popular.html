@@ -17,7 +17,9 @@
 		            $(".alert").alert();
 		        });
 
-
+			 $(".popover-examples a").popover({
+			        placement : 'top'
+			    });
 
 		    });  
 
@@ -48,17 +50,7 @@
                 <li><a href="#">Login</a></li>
 
             </ul>
-            <form role="search" class="navbar-form navbar-right">
-		    	
-		            <div class="form-group">
-		                <div class="input-group">
-		                    <input type="text" class="form-control" placeholder="Search" id="inputGroup"/>
-		                    <span class="input-group-addon">
-		                       <a href=""> <i class="glyphicon glyphicon-search"></i> </a>
-		                    </span>
-		                </div>
-		            </div>                   
-            </form>      
+     
         </div>
     </nav>
 
@@ -89,9 +81,19 @@
         <strong>Note!</strong> Please read the comments carefully.
     </div>
 
+
+
 	
 
-		
+			<div class="footer" style="position:fixed;bottom:0;width:100%;text-align:center">
+			    <ul class="popover-examples list-inline"> 
+			        <li><a href="#" class="btn btn-primary" data-toggle="popover" title="Popover title" data-content="Default popover">Popover</a></li>
+			        <li><a href="#" class="btn btn-success" data-toggle="popover" title="Popover title" data-content="Another popover">Another popover</a></li>
+			        <li><a href="#" class="btn btn-info" data-toggle="popover" title="Popover title" data-content="A larger popover to demonstrate the max-width of the Bootstrap popover.">Large popover</a></li>
+			        <li><a href="#" class="btn btn-warning" data-toggle="popover" title="Popover title" data-content="The last tip!">Last popover</a></li>
+			    </ul>
+					   
+			</div>	
 
 
 

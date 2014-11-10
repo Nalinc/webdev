@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <script src="jquery-1.11.1.min.js"></script>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="bootstrap.min.js"></script>
-        <link href="bootstrap.min.css" rel="stylesheet" media="screen">
-        <style>
             html {
               font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
               font-size: 18px;
@@ -61,23 +51,3 @@
             .tt-suggestion p {
               margin: 0;
             }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="countries"> <!-- This is a .countries in that examples.js -->
-                <div class="demo">
-                    <input class="typeahead form-control" type="text" placeholder="Countries" autocomplete="off" spellcheck="false" dir="auto" > <!-- This is a typehead class in that js-->
-                    <input class="typeahead form-control" type="text" disabled="" autocomplete="off" spellcheck="false" style="visibility: hidden; ">
-                    <pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: nowrap; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;">
-                    </pre>
-                    <span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;">
-                        <div class="tt-dataset-countries"></div>
-                    </span>
-                </div>
-            </div>
-            <script src="./typeahead.bundle.js"></script>
-            <script src="./example.js"></script>
-        </div>
-    </body>
-</html>
