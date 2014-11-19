@@ -1,0 +1,35 @@
+
+<ul style="list-style-type:none;margin-top:20px;border-bottom:1px solid black" ng-repeat="c in cc.car">
+	<div class="container" ng-controller="tabController as tab">
+
+		<li><b>CarName:</b>{{c.name}}</li>
+		<li><b>Model No:</b> {{c.model}}</li>
+		<li><img src="{{c.path}}"></li>
+		<li>
+			<ul class="nav nav-pills" style="list-style-type:none">
+				<li ng-class="{active:tab.isSet(1)}">
+					<a href="" ng-click="tab.setTab(1)">Description</a>
+				</li>
+				<li ng-class="{active:tab.isSet(2)}">
+					<a href="" ng-click="tab.setTab(2)">Features</a>
+				</li>
+				<li ng-class="{active:tab.isSet(3)}">
+					<a href="" ng-click="tab.setTab(3)">Reviews</a>
+				</li>
+
+			</ul>
+		</li>
+		<li>	
+			<div ng-show="tab.isSet(1)"> 
+				{{c.description}}
+			</div>
+			<div ng-show="tab.isSet(2)" ng-bind-html="c.features"> 
+				
+			</div>
+			<div ng-show="tab.isSet(3)"> 
+				{{c.description}}
+			</div>
+		</li>
+		
+	</div>					
+</ul>
