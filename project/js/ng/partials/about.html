@@ -1,69 +1,24 @@
-<div class="container">       
+<div class="container">
+	<div class="row" style="float:none;margin:0 auto">
+		<div class="col-xs-12" style="text-align:center">
+			<input type="text" placeholder="Search your destination" style="width:160px" ng-model="name">
+			<button class="btn btn-danger">Search</button>
+		</div>
+	</div>
+	<div class="row" ng-controller="aController">
+		<div class="col-xs-8" style="float:none;margin:0 auto">
+			 
+			 	<ul ng-repeat="i in datum | filter:name" style="width:100%;list-style-type:none;">
+			 		<li style="padding:5px;background-color:#dadada;border-radius:5px;">
+						<p><b>{{i.loc}}</b></p>
+						<p>{{i.days}}</p>
+						<p>{{i.price}}</p>
+						<p><i>"{{i.tagline}}"</i>
+						<button class="btn btn-primary" style="float:right;margin-top:-10px">Book</button></p>
+			 		</li>			 		
+			 	</ul>
 
-        <div id="myCarousel" class="carousel">
-        
-            <div class="carousel-inner">
-                <div class="active item"><img src="images/beachHolidays.jpeg" class="img-responsive" >
-                      <div class="carousel-caption">
-                            <h3>Beach Holidays</h3>
-                      </div>
-                </div>
-                <div class="item"><img src="images/adventureHolidays.jpg" class="img-responsive">
-                      <div class="carousel-caption">
-                            <h3>Adventure Trips</h3>
-                      </div>
-                </div>
-                <div class="item"><img src="images/honeymoonHolidays.jpeg" class="img-responsive">
-                      <div class="carousel-caption">
-                            <h3>Honeymoon Packages</h3>
-                      </div>
-                </div>
-                <div class="item"><img src="images/pilgrimageHolidays.jpg" class="img-responsive">
-                      <div class="carousel-caption">
-                            <h3>Pilgrimage Holidays</h3>
-                      </div>
-                </div>                
-            </div>
-            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-        </div>
-
-
-        <div class="row" style="text-align:center;">
-          <div class="col-sm-12">
-            <h3><b>How It Works</b></h3>
-          </div>
-        </div>
-
-        <div class="row" style="text-align:center;">
-          <div class="col-sm-4">
-            <h4><i class="glyphicon glyphicon-record"></i>
-              <b>Make up yur mind</b>
-            </h4>
-            <p> bla bla bkla</p>
-          </div>
-          <div class="col-sm-4">
-            <h4><i class="glyphicon glyphicon-record"></i>
-              <b>Choose Your destination</b>
-            </h4>
-            <p> bla bla bkla</p>            
-          </div>
-          <div class="col-sm-4">
-            <h4><i class="glyphicon glyphicon-record"></i>
-              <b>Plan Vacation</b></h4>
-            <p> bla bla bkla</p>
-          </div>
-
-        </div>
-
-   <div class="push"></div>
+		</div>
+	</div>	
 </div>
 
-
-<script type="text/javascript">
-
-  $('#myCarousel').carousel({
-  interval: 4000
-  })
-
-</script>

@@ -1,16 +1,24 @@
-html, body {
-    height: 100%;
+html,body
+{
+    height:95%;
 }
+#navbarCollapse > div
+{
+    padding:15px;
+    display:inline-block;
+}
+
+#navbarCollapse > div >a
+{
+   text-decoration: none 
+}
+
 .container {
     min-height: 90%;
     height: auto !important;
     height: 90%;
     width: 80%;
-    margin: 0 auto -60px; /* the bottom margin is the negative value of the footer's height */
-}
-.carousel-inner {
-    height: auto;
-    width:100%;
+    margin-top: 80px; 
 }
 
 .carousel-inner .item {
@@ -29,8 +37,10 @@ html, body {
     margin-bottom: -3%;
     text-align:left;
 }
-.footer, .push {
-    height: 60px; /* .push must be the same height as .footer */
+.footer {
+position:relative;
+bottom:0;
+height:60px;
 }
 
 

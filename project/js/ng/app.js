@@ -1,26 +1,20 @@
-
-var app= angular.module('Holidays',['ngRoute']);
+var app= angular.module('Holidays',['ngRoute','appCtrl']);
 
 app.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/', {
-        templateUrl: 'js/ng/partials/about.html',
+        templateUrl: 'js/ng/partials/home.html',
         controller: 'hController'
       }).
       when('/about', {
-        templateUrl: 'js/ng/partials/ab.html',
-        controller: 'hController'
+        templateUrl: 'js/ng/partials/about.html',
+        controller: 'aController'
       }).
       otherwise({
         redirectTo: '/'
       });
   }]);
-
-
-app.controller("hController",function(){
-
-});
 
 
 app.directive("ngHeader",function(){

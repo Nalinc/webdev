@@ -1,0 +1,18 @@
+[{	"loc":"Malaysia",
+	"days":"3 days, 4 nights",
+	"price":"50000 INR",
+	"tagline":"Malaysia truely asia"
+	},
+	{
+	"loc":"Gujarat",
+	"days":"2 days, 1 nights",
+	"price":"8000 INR",
+	"tagline":"Kuch din toh gujaro Gujarat mein"
+	},
+	{
+	"loc":"Madhya Pradesh",
+	"days":"3 days, 2 nights",
+	"price":"12000 INR",
+	"tagline":"MP gajab hai"
+	}
+]
