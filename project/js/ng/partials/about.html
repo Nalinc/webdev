@@ -1,20 +1,20 @@
 <div class="container">
-	<div class="row" style="float:none;margin:0 auto">
+	<div class="row" style="float:none;margin:0 auto;margin-bottom:10px">
 		<div class="col-xs-12" style="text-align:center">
 			<input type="text" placeholder="Search your destination" style="width:160px" ng-model="name">
 			<button class="btn btn-danger">Search</button>
 		</div>
 	</div>
 	<div class="row" ng-controller="aController">
-		<div class="col-xs-8" style="float:none;margin:0 auto">
+		<div class="col-md-10" style="float:none;margin:0 auto">
 			 
-			 	<ul ng-repeat="i in datum | filter:name" style="width:100%;list-style-type:none;">
+			 	<ul ng-repeat="i in datum | filter:name" style="width:100%;list-style-type:none;padding:0">
 			 		<li style="padding:5px;background-color:#dadada;border-radius:5px;">
 						<p><b>{{i.loc}}</b></p>
 						<p>{{i.days}}</p>
 						<p>{{i.price}}</p>
-						<p><i>"{{i.tagline}}"</i>
-						<button class="btn btn-primary" style="float:right;margin-top:-10px">Book</button></p>
+						<p><i>"{{i.tagline}}"</i></p>
+						<button class="btn btn-primary">Book</button>
 			 		</li>			 		
 			 	</ul>
 

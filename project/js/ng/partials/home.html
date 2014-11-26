@@ -1,3 +1,5 @@
+
+
 <div class="container">       
 
         <div id="myCarousel" class="carousel">
@@ -5,27 +7,27 @@
             <div class="carousel-inner">
                 <div class="active item"><img src="images/beachHolidays.jpeg" class="img-responsive" >
                       <div class="carousel-caption">
-                            <h3>Beach Holidays</h3>
+                            <span class="wordSize"><b>Beach Holidays</b></span>
                       </div>
                 </div>
                 <div class="item"><img src="images/adventureHolidays.jpg" class="img-responsive">
                       <div class="carousel-caption">
-                            <h3>Adventure Trips</h3>
+                            <span class="wordSize"><b>Adventure Trips</b></span>
                       </div>
                 </div>
                 <div class="item"><img src="images/honeymoonHolidays.jpeg" class="img-responsive">
                       <div class="carousel-caption">
-                            <h3>Honeymoon Packages</h3>
+                            <span class="wordSize"><b>Honeymoon Packages</b></span>
                       </div>
                 </div>
                 <div class="item"><img src="images/pilgrimageHolidays.jpg" class="img-responsive">
                       <div class="carousel-caption">
-                            <h3>Pilgrimage Holidays</h3>
+                            <span class="wordSize"><b>Pilgrimage Holidays</b></span>
                       </div>
                 </div>      
                 <div class="item"><img src="images/JungleNights.jpg" class="img-responsive">
                       <div class="carousel-caption">
-                            <h3>Jungle Trips</h3>
+                            <span class="wordSize"><b>Jungle Trips</b></span>
                       </div>
                 </div>                           
             </div>
@@ -34,37 +36,74 @@
         </div>
 
 
-        <div class="row" style="text-align:center;">
+        <div class="row" style="text-align:center;margin-top:30px">
           <div class="col-sm-12">
-            <h3><b>How It Works</b></h3>
+            <span><b>How It Works</b></span>
           </div>
         </div>
 
         <div class="row" style="text-align:center;">
-          <div class="col-sm-4">
-            <h4><i class="glyphicon glyphicon-record"></i>
+          <div class="col-sm-4 wordSize`">
+            <span><i class="glyphicon glyphicon-record"></i>
               <b>Make up yur mind</b>
-            </h4>
+            </span>
             <p> bla bla bkla</p>
           </div>
-          <div class="col-sm-4">
-            <h4><i class="glyphicon glyphicon-record"></i>
+          <div class="col-sm-4 wordSize`">
+            <span><i class="glyphicon glyphicon-record"></i>
               <b>Choose Your destination</b>
-            </h4>
+            </span>
             <p> bla bla bkla</p>            
           </div>
-          <div class="col-sm-4">
-            <h4><i class="glyphicon glyphicon-record"></i>
-              <b>Plan Vacation</b></h4>
+          <div class="col-sm-4 wordSize`">
+            <span><i class="glyphicon glyphicon-record"></i>
+              <b>Plan Vacation</b></span>
             <p> bla bla bkla</p>
           </div>
 
         </div>
 
         <div class="row">
+
+          <div class="col-md-6 col-xs-12 well">
+
+            <div class="row" style="padding-bottom:15px">
+              <div class="col-sm-6 col-xs-12 " style="text-align:center" >
+                  <i class="glyphicon glyphicon-plane"></i>
+                  <input type="text" placeholder="From" style="width:80%">
+              </div>
+              <div class="col-sm-6 col-xs-12" style="text-align:center">
+                  <i class="glyphicon glyphicon-plane"></i>
+                  <input type="text" placeholder="To" style="width:80%">               
+
+              </div>              
+            </div>
+
+            <div class="row" style="padding-bottom:15px">
+              <div class="col-sm-6 col-xs-12" style="text-align:center">
+                <i class="glyphicon glyphicon-time"></i>
+                <input class="datepicker" id="dpd1" size="19" style="width:80%;height:25px" type="text" placeholder="Departure">
+                  
+              </div>
+              <div class="col-sm-6 col-xs-12" style="text-align:center">
+                <i class="glyphicon glyphicon-time"></i>
+                <input class="datepicker" id="dpd2" size="19" style="width:80%;height:25px" type="text" placeholder="Return">
+              </div>
+                        
+            </div>
+            <div class="row">
+              <div class="col-xs-12" style="text-align:center">
+                <button style="margin-left:16px" class="btn btn-primary">Search</button>
+              </div>
+
+            </div>
+
+          </div>
+
+
           <div class="col-md-6 col-xs-12" >
             <div class="row">
-              <div class="col-xs-12" >
+              <div class="col-xs-12" style="float:none;margin:0 auto">
                 <label>Deals in your Inbox</label><br>
                 Sign up for emails about travel deals and promotions.<br>
                 <i class="glyphicon glyphicon-envelope"></i>
@@ -73,61 +112,11 @@
 
               </div>
 
-
-              <div class="col-xs-12" id="myCanvasContainer">
-               <canvas  id="myCanvas" style="width:400px;height:100px;">
-                <ul>
-                 <li><a href="#/about" style="color:red">Hot Deals</a></li>
-                 <li><a href="#/about" style="color:orange">Popular Destinations</a></li>
-                 <li><a href="#/about" style="color:black">Offers</a></li>
-                 <li><a href="#/about" style="color:blue">Discount</a></li>
-                 <li><a href="#/about" style="color:green">Trip Advisor</a></li>
-                </ul>
-               </canvas>
-              </div>
-
-
+              <div id="tagCloud" class="tagCloud col-xs-12"  style="float:none;margin:0 auto"></div>
+               
               </div>
             </div>
 
-
-
-          <div class="col-md-6 col-xs-12 well" >
-
-            <div class="row" style="padding-bottom:15px">
-              <div class="col-md-6 col-xs-12 " >
-                  <i class="glyphicon glyphicon-plane"></i>
-                  <input type="text" placeholder="From">
-              </div>
-              <div class="col-md-6 col-xs-12" >
-                  <i class="glyphicon glyphicon-plane"></i>
-                  <input type="text" placeholder="To">
-                  
-  
-
-              </div>              
-            </div>
-
-            <div class="row" style="padding-bottom:15px">
-              <div class="col-md-6 col-xs-12" >
-                <i class="glyphicon glyphicon-time"></i>
-                <input class="datepicker" id="dpd1" size="19" style="height:25px" type="text" placeholder="Departure">
-                  
-              </div>
-              <div class="col-md-6 col-xs-12" >
-                <i class="glyphicon glyphicon-time"></i>
-                <input class="datepicker" id="dpd2" size="19" style="height:25px" type="text" placeholder="Return">
-              </div>
-                        
-            </div>
-            <div class="row">
-              <div class="col-xs-12">
-                <button style="margin-left:16px" class="btn btn-primary">Search</button>
-              </div>
-
-            </div>
-
-          </div>
 
 
 
@@ -168,19 +157,17 @@
       checkout.hide();
     }).data('datepicker');
 
+      var word_array = [
+          {text: "Sale", weight: 6, link: "#/about"},
+          {text: "Fun", weight: 10, link: "#/about"},          
+          {text: "Discount", weight: 5, link: "#/about"},
+          {text: "Hot Deals", weight: 9, link: "#/about"},
+          {text: "Popular", weight: 7, link: "#/about"},
+          {text: "Holidays", weight: 15, link: "#/about"}
+          // ...as many words as you want
+      ];
  $(document).ready(function() {
-   if( ! $('#myCanvas').tagcanvas({
-     textColour : null,
-     outlineThickness : 1,
-     maxSpeed : 0.02,
-     minSpeed: 0.9,
-     depth : 0.75,
-     initial: [0.8,-0.3]
-   })) {
-     // TagCanvas failed to load
-     $('#myCanvasContainer').hide();
-   }
-   // your other jQuery stuff here...
+     $("#tagCloud").jQCloud(word_array);
  });
 
 

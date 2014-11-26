@@ -37,10 +37,35 @@ html,body
     margin-bottom: -3%;
     text-align:left;
 }
+
+.wordSize{
+    padding-left: 30px;
+    font-size: 25px;
+}
+
+.tagCloud
+{
+   width: 250px; 
+   height: 200px;
+}
+
 .footer {
-position:relative;
+position:fixed;
 bottom:0;
 height:60px;
 }
 
 
+@media (max-width: 900px){
+.wordSize{
+    padding-left: 30px;
+    font-size: 15px;
+}
+
+@media (max-width: 767px){
+.wordSize{
+    padding-left: 60px;
+    font-size: 10px;
+}
+
+}

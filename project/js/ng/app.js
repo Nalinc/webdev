@@ -11,6 +11,10 @@ app.config(['$routeProvider',
         templateUrl: 'js/ng/partials/about.html',
         controller: 'aController'
       }).
+      when('/popular', {
+        templateUrl: 'js/ng/partials/popular.html',
+        controller: 'aController'
+      }).      
       otherwise({
         redirectTo: '/'
       });

@@ -10,7 +10,7 @@
     <div id="navbarCollapse" class="collapse navbar-collapse">
         <div >
             <a href="#/about" style="padding-right:10px">About</a>
-            <a href="#">Popular</a>
+            <a href="#/popular">Popular</a>
         </div>
 
         <div  class="pull-right">
@@ -29,3 +29,35 @@
         </form>      
     </div>
 </nav>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $("#login").click(function(){
+            $("#myModal").modal('show');
+        })
+    });
+
+</script>
+
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Login</h4>
+            </div>
+            <div class="modal-body" style="text-align:center">
+                <p> Dont have an account yet ? <a href="file:///D:/webdev/css/assignment/index.html"> Register here </a></p>
+                <input type="text" placeholder="username"><br>
+                <input type="password" placeholder="password" style="margin-top:20px"><br>
+                 <button type="button" class="btn btn-primary"  style="margin-top:10px">Sign In</button>
+            </div>
+            <div class="modal-footer">
+               
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
